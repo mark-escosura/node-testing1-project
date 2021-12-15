@@ -12,9 +12,8 @@ function trimProperties(obj) {
   for (var prop in obj) {
     if (typeof obj[prop] === "string") {
       trimmedObj[prop] = obj[prop].trim();
-
     } else {
-      trimmedObj[prop] = obj[prop]
+      trimmedObj[prop] = obj[prop];
     }
   }
 
@@ -49,8 +48,14 @@ function trimPropertiesMutation(obj) {
  */
 function findLargestInteger(integers) {
   // ✨ implement
+  var largest = 0;
+  for (var i = 0; i < integers.length; i++) {
+    if (integers[i].integer > largest) {
+      largest = integers[i].integer;
+    }
+  }
+  return largest;
 }
-
 class Counter {
   /**
    * [Exercise 4A] Counter creates a counter
