@@ -31,6 +31,12 @@ function trimProperties(obj) {
  */
 function trimPropertiesMutation(obj) {
   // ✨ implement
+  for (var prop in obj) {
+    if (typeof obj[prop] === "string") {
+      obj[prop] = obj[prop].trim();
+    }
+  }
+  return obj;
 }
 
 /**
